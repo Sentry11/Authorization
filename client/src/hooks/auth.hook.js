@@ -4,7 +4,7 @@
 
 import { useState, useCallback, useEffect } from "react"
 
-const storageName = 'userData1'
+const storageName = 'userData'
 
 
 export const useAuth = () => {
@@ -16,7 +16,7 @@ export const useAuth = () => {
 
         setToken(jwtTocken)
         setUserId(id)
-        localStorage.setItem(storageName,JSON.stringify({
+        localStorage.setItem(storageName ,JSON.stringify({
             userId: id, token:jwtTocken
         }))
 
@@ -32,7 +32,7 @@ export const useAuth = () => {
     // checking if page was reloading but user autorized
     useEffect(() => {
         const data = JSON.parse(localStorage.getItem(storageName))
-
+        
         if (data && data.token) {
             login(data.token, data.userId)
         }

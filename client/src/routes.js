@@ -3,6 +3,7 @@ import {Routes,Route} from 'react-router-dom'
 import { AuthPage } from "./pages/AuthPage"
 import { ExamplePage } from "./pages/ExamplePage"
 import { SomeDataPage } from "./pages/SomeDataPage"
+import { MainPage } from "./pages/MainPage"
 
 export const useRoutes = isAuthenticated =>{
 
@@ -10,12 +11,12 @@ export const useRoutes = isAuthenticated =>{
         return(
             <Routes>
 
+                <Route path = "/" element = { <MainPage/> }    />
+
                 <Route path = "data-page" element = {<SomeDataPage/>}/> 
                     
-                <Route path = "example-page" element = {  <ExamplePage/>}  />
-              
+                <Route path = "example-page" element = {  <ExamplePage/>}  /> 
 
-            
 
             </Routes>
         )
