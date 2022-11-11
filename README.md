@@ -1,4 +1,4 @@
-# Authorization
+# Authentication
 Ready authorization template based on MERN stack
 # Overview  
 This design system is designed to quickly integrate into existing systems to increase developer productivity.   
